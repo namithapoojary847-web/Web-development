@@ -1,0 +1,908 @@
+/* ---------- Global Styles ---------- */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #3a2c1a;
+    background-image: url("images/background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Overlay */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 243, 214, 0.65);
+    z-index: -1;
+}
+
+
+
+
+
+
+
+
+
+
+/* ---------- Header ---------- */
+header {
+    background: transparent;
+    text-align: center;
+    padding: 25px;
+}
+
+header h1 {
+    font-family: 'Rochester', cursive;
+    font-size: 80px;
+    color: #5c2f0c;
+    margin: 0;
+}
+
+header p.subtitle {
+    font-family: 'Amiri', serif;
+    font-size: 24px;
+    font-style: italic;
+    color: #8b4513;
+    margin: 5px 0 20px;
+}
+
+
+
+
+
+
+/* ---------- Navigation ---------- */
+nav {
+    background: #7a3e00;
+    padding: 12px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ---------- Gallery ---------- */
+.container {
+    padding: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+}
+
+.card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card h2 {
+    color: #8b4513;
+    margin: 15px 0 8px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ---------- Services ---------- */
+.services {
+    background: transparent;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.services h2 {
+    color: #4a2510;
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.services h2::after {
+    content: "• • •";
+    display: block;
+    margin-top: 10px;
+    color: #b87333;
+    letter-spacing: 10px;
+}
+
+.services-list {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: auto;
+}
+
+.services-list li {
+    font-size: 18px;
+    color: #3a1f0b;
+    margin: 15px 0;
+    padding-left: 30px;
+    position: relative;
+}
+
+.services-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 18px;
+    height: 18px;
+    background: #b87333;
+    border-radius: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ---------- About ---------- */
+.about {
+    background: transparent;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.about h2 {
+    color: #4a2510;
+    font-size: 36px;
+}
+
+.about p {
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.6;
+}
+
+
+
+
+
+
+/* ---------- Contact ---------- */
+.contact {
+    background: transparent;
+    padding: 40px;
+    text-align: center;
+}
+
+.contact h2 {
+    color: #7a3e00;
+}
+
+.contact form {
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contact input,
+.contact textarea {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #D2691E;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+/* Shine effect when clicked */
+.contact input:focus,
+.contact textarea:focus {
+    border: 1px solid #8B4513;
+    box-shadow: 0 0 8px rgba(139, 69, 19, 0.6);
+}
+
+.contact button {
+    background: #7a3e00;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 30px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contact button:hover {
+    background: #7A3E00;
+}
+
+
+
+
+
+/* ---------- CTA ---------- */
+.cta {
+    text-align: center;
+    padding: 60px 20px;
+border: 1px solid #D2691E;
+    
+}
+
+.cta h2 {
+    color: #4a2408;
+}
+
+.cta-btn {
+    display: inline-block;
+    padding: 14px 30px;
+    background: #7a3e00;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+}
+
+.cta-btn:hover {
+    background: #5e2f00;
+}.feedback-form input,
+.feedback-form textarea,
+.feedback-form select {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #D2691E;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.feedback-form input:focus,
+.feedback-form textarea:focus,
+.feedback-form select:focus {
+    border: 1px solid #8B4513;
+    box-shadow: 0 0 8px rgba(139, 69, 19, 0.6);
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ---------- Footer ---------- */
+footer {
+    text-align: center;
+    padding: 12px;
+    background: rgba(255, 243, 214, 0.35);
+    color: #3a2c1a;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 8px;
+}
+
+.footer-links a {
+    font-size: 20px;
+    color: #7a3e00;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: #5e2f00;
+    transform: translateY(-3px);
+}
+
+
+
+
+
+/* ---------- Responsive ---------- */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 50px;
+    }
+    header p.subtitle {
+        font-size: 18px;
+    }
+    nav ul {
+        flex-direction: column;
+    }
+    .card img {
+        height: 200px;
+    }
+}
+.footer {
+    padding: 40px 20px;
+    text-align: center;
+    background: transparent;   /* THIS makes it transparent */
+}
+
+.footer-info {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.footer-box {
+    width: 250px;
+    margin: 10px;
+}
+
+.footer-box h4 {
+    color: #6b3e26;
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.footer-box p {
+    color: #3a2c1a;
+    font-size: 15px;
+}
+/* ===== OUR WORKS SECTION ===== */
+#our-works {
+    padding: 60px 0;
+}
+
+/* Slider */
+.slider {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.slides {
+    position: relative;
+    width: 300px;
+    height: 400px;
+}
+
+/* Images */
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+
+/* Active image */
+.slide.active {
+    opacity: 1;
+}
+.works-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.works-grid img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 14px;
+    animation: float 6s ease-in-out infinite;
+}
+
+.works-grid img:nth-child(even) {
+    animation-delay: 1.5s;
+}
+
+@keyframes float {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-6px); }
+    100% { transform: translateY(0); }
+}
+/* ===== OUR WORKS ===== */
+#our-works {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 32px;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===== MODAL ===== */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.modal img {
+    max-width: 85%;
+    max-height: 85%;
+    border-radius: 12px;
+}
+
+.close {
+    position: absolute;
+    top: 25px;
+    right: 40px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+#our-works {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #3b2b1f;
+}
+
+.carousel {
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 30px;
+    animation: slide 18s linear infinite;
+}
+
+.carousel-track img {
+    width: 260px;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 18px;
+    flex-shrink: 0;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* KMF-style smooth movement */
+@keyframes slide {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+.testimonial-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.testimonial-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  max-width: 300px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-10px);
+}
+
+.testimonial-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.testimonial-card h3 {
+  margin: 10px 0 5px;
+  font-family: 'Cursive', sans-serif;
+  color: #b23a48;
+}
+
+.testimonial-card p {
+  font-style: italic;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+
+
+
+
+
+
+/* CSS Hearts */
+.testimonial-card .hearts {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.testimonial-card .hearts .heart {
+  width: 20px;
+  height: 20px;
+  background-color: #800000; /* Deep Maroon */
+  clip-path: polygon(
+    50% 0%, 61% 12%, 75% 12%, 88% 25%, 88% 38%, 75% 50%, 
+    50% 75%, 25% 50%, 12% 38%, 12% 25%, 25% 12%, 39% 12%
+  );
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.testimonial-card .hearts .heart:hover {
+  transform: scale(1.2);
+  background-color: #b22222;
+}
+
+#feedback {
+  padding: 50px 20px;
+  background: #fffaf0;
+  text-align: center;
+}
+
+#feedback h2 {
+  font-family: 'Cursive', sans-serif;
+  color: #b23a48;
+  margin-bottom: 25px;
+  font-size: 2rem;
+}
+
+.feedback-form input,
+.feedback-form textarea,
+.feedback-form select {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  width: 250px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.feedback-form button {
+  padding: 10px 20px;
+  background-color: #800000;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+.feedback-form button:hover {
+  background-color: #b22222;
+}
+
+.feedback-card {
+  background: #fff;
+  padding: 20px;
+  margin: 15px auto;
+  max-width: 400px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.feedback-card h3 {
+  margin-bottom: 5px;
+  color: #800000;
+}
+
+.feedback-card p {
+  font-style: italic;
+  margin-bottom: 5px;
+}
+
+.feedback-card .hearts {
+  display: flex;
+  gap: 5px;
+}
+
+.feedback-card .hearts .heart {
+  width: 20px;
+  height: 20px;
+  background-color: #800000;
+  clip-path: polygon(
+    50% 0%, 61% 12%, 75% 12%, 88% 25%, 88% 38%, 75% 50%, 
+    50% 75%, 25% 50%, 12% 38%, 12% 25%, 25% 12%, 39% 12%
+  );
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.feedback-card .hearts .heart:hover {
+  transform: scale(1.2);
+  background-color: #b22222;
+}
+.feedback-card {
+  background: #fff;
+  padding: 20px;
+  margin: 15px auto;
+  max-width: 400px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.feedback-card h3 {
+  margin-bottom: 5px;
+  color: #800000;
+}
+
+.feedback-card p {
+  font-style: italic;
+  margin-bottom: 5px;
+}
+
+.feedback-card .hearts {
+  display: flex;
+  gap: 5px;
+}
+
+.feedback-card .hearts .heart {
+  width: 20px;
+  height: 20px;
+  background-color: #800000;
+  clip-path: polygon(
+    50% 0%, 61% 12%, 75% 12%, 88% 25%, 88% 38%, 75% 50%, 
+    50% 75%, 25% 50%, 12% 38%, 12% 25%, 25% 12%, 39% 12%
+  );
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.feedback-card .hearts .heart:hover {
+  transform: scale(1.2);
+  background-color: #b22222;
+}
+
+#feedback {
+  padding: 50px 20px;
+  background: transparent;  /* Changed from #fffaf0 to transparent */
+  text-align: center;
+}
+
+#feedback h2 {
+  font-family: 'Cursive', sans-serif;
+  color: #b23a48;
+  margin-bottom: 25px;
+  font-size: 2rem;
+}
+
+.feedback-form input,
+.feedback-form textarea,
+.feedback-form select {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  width: 250px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.feedback-form button {
+  padding: 10px 20px;
+  background-color: #800000;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+.feedback-form button:hover {
+  background-color: #b22222;
+}
+
+.feedback-card {
+  background: #fff;
+  padding: 20px;
+  margin: 15px auto;
+  max-width: 400px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.feedback-card h3 {
+  margin-bottom: 5px;
+  color: #800000;
+}
+
+.feedback-card p {
+  font-style: italic;
+  margin-bottom: 5px;
+}
+
+.feedback-card .hearts {
+  display: flex;
+  gap: 5px;
+}
+
+.feedback-card .hearts .heart {
+  width: 20px;
+  height: 20px;
+  background-color: #800000;
+  clip-path: polygon(
+    50% 0%, 61% 12%, 75% 12%, 88% 25%, 88% 38%, 75% 50%, 
+    50% 75%, 25% 50%, 12% 38%, 12% 25%, 25% 12%, 39% 12%
+  );
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.feedback-card .hearts .heart:hover {
+  transform: scale(1.2);
+  background-color: #b22222;
+}
+
+
+.feedback-carousel {
+  overflow-x: auto;
+  padding: 20px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Horizontal feedback scroll */
+.feedback-track {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 20px 0;
+  scroll-behavior: smooth;
+}
+
+.feedback-track::-webkit-scrollbar {
+  height: 8px;
+}
+
+.feedback-track::-webkit-scrollbar-thumb {
+  background-color: #b22222;
+  border-radius: 4px;
+}
+
+.feedback-card {
+  flex: 0 0 300px; /* Fixed width for horizontal scrolling */
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CTA CONTINUATION*/
+/* FORCE brown borders - final override */
+
+.feedback-form input,
+.feedback-form textarea,
+.feedback-form select {
+    border: 2px solid #8B4513 !important;
+}
+
+.feedback-form input:focus,
+.feedback-form textarea:focus,
+.feedback-form select:focus {
+    border: 2px solid #5C2F0C !important;
+    box-shadow: 0 0 10px rgba(92, 47, 12, 0.7) !important;
+}
+
+.cta {
+    border: 2px solid #8B4513 !important;
+}

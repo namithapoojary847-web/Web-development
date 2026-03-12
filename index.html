@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elegant Mehendi Designs</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rochester&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+
+
+
+
+
+
+<!-- Header -->
+<header>
+    <div class="header-content">
+        <h1>Swarna Henna</h1>
+        <p class="subtitle">Tradition • Beauty • Celebration</p>
+        <nav>
+            <ul>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- About Section -->
+<section class="about" id="about">
+    <h2>About Swarna Henna</h2>
+    <p>
+        At Swarna Henna, we blend tradition and artistry to create stunning mehendi designs for every occasion. 
+        From intricate bridal patterns to soft maternity designs, each creation is crafted with love and care. 
+        Our passion is to make your celebrations unforgettable with beautiful, meaningful henna art.
+    </p>
+</section>
+
+
+<!-- Gallery Section -->
+<section class="container" id="gallery">
+    <div class="card">
+        <img src="images/Bridal.jpeg" alt="Bridal Mehendi" onclick="openModal(this)">
+        <h2>Bridal Mehendi</h2>
+        <p>Traditional and detailed designs for weddings.</p>
+    </div>
+
+    <div class="card">
+        <img src="images/Simple.jpeg" alt="Simple Mehendi" onclick="openModal(this)">
+        <h2>Normal Mehendi</h2>
+        <p>Simple designs for daily wear and small events.</p>
+    </div>
+
+    <div class="card">
+        <img src="images/maternity.png" alt="Maternity Mehendi" onclick="openModal(this)">
+        <h2>Maternity Mehendi</h2>
+        <p>Soft and meaningful designs celebrating motherhood.</p>
+    </div>
+
+    <div class="card">
+        <img src="images/Arabic.jpeg" alt="Arabic Mehendi" onclick="openModal(this)">
+        <h2>Arabic Mehendi</h2>
+        <p>Graceful patterns that blend tradition with modern elegance.</p>
+    </div>
+
+    <div class="card">
+        <img src="images/Engagement.jpeg" alt="Engagement Mehendi" onclick="openModal(this)">
+        <h2>Engagement Mehendi</h2>
+        <p>Elegant and modern designs for your special engagement day.</p>
+    </div>
+
+    <div class="card">
+        <img src="images/kids.jpeg" alt="kids Mehendi" onclick="openModal(this)">
+        <h2>Kids Mehendi</h2>
+        <p>Fun, playful, and adorable designs for little hands.</p>
+    </div>
+
+    <div class="card">
+        <img src="images/tattoo.jpeg" alt="Tattoo" onclick="openModal(this)">
+        <h2>Tattoo Henna</h2>
+        <p>Trendy mehendi-inspired temporary tattoos for a modern twist.</p>
+    </div>
+
+    <div class="card">
+        <img src="images/rajasthani.jpeg" alt="Rajasthani Mehandi" onclick="openModal(this)">
+        <h2>Rajasthani Mehandi</h2>
+        <p>Intricate and traditional designs inspired by Rajasthani culture.</p>
+    </div>
+
+    <div class="card">
+        <img src="images/glitter mehandi.jpeg" alt="Glitter Mehandi" onclick="openModal(this)">
+        <h2>Glitter Mehandi</h2>
+        <p>Glittery designs that shine as bright as your celebrations.</p>
+    </div>
+
+    <div class="card">
+        <img src="images/mimimalist.jpeg" alt="Minimalist Mehandi" onclick="openModal(this)">
+        <h2>Minimalist Mehandi</h2>
+        <p>Clean and subtle designs that celebrate simplicity and grace.</p>
+    </div>
+</section>
+ 
+
+
+
+
+
+
+
+
+
+<!-- Service Section -->
+<section class="services" id="services">
+    <h2>Our Services</h2>
+    <ul class="services-list">
+        <li><strong>Studio & Home Mehendi</strong> – combine location-based services</li>
+<li><strong>Bridal Mehendi</strong> – full bridal designs</li>
+<li><strong>Maternity Mehendi</strong> – soft and meaningful designs</li>
+<li><strong>Hands & Legs Mehendi (Combo)</strong> – classic and combo designs</li>
+<li><strong>Kids & Party Mehendi</strong> – playful or minimalist designs</li>
+<li><strong>Henna Tattoos / Glitter Mehendi</strong> – modern, trendy designs</li>
+
+    </ul>
+</section>
+
+
+
+
+<!-- Contact Section -->
+<section class="contact" id="contact">
+    <h2>Book an Appointment</h2>
+    <form onsubmit="return validateForm()">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="tel" id="phone" placeholder="Phone Number" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit" class="main-btn">Send</button>
+
+    </form>
+</section>
+
+<section class="cta">
+    <h2>Ready to Adorn Your Hands with Elegance?</h2>
+    <p>Traditional designs, modern elegance, and personal care for every special occasion.</p>
+    <a href="https://wa.me/919742152545" target="_blank" class="cta-btn">Book Your Mehendi</a>
+
+</section>
+
+
+
+
+
+
+
+
+<!-- Image Modal -->
+<div id="modal">
+    <span onclick="closeModal()">×</span>
+    <img id="modalImg">
+</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Our Works</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<section id="our-works">
+    <h2 class="section-title">Our Works</h2>
+
+    <div class="carousel">
+        <div class="carousel-track">
+            <img src="images/a.png">
+            <img src="images/b.png">
+            <img src="images/c.png">
+            <img src="images/D.png">
+            <img src="images/e.png">
+            <img src="images/f.png">
+
+            <img src="images/a.png">
+            <img src="images/b.png">
+            <img src="images/c.png">
+            <img src="images/D.png">
+            <img src="images/e.png">
+            <img src="images/f.png">
+
+
+
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+<section id="feedback">
+  <h2>Give Your Feedback 🤎</h2>
+
+  <form id="feedbackForm">
+    <div class="feedback-form">
+
+      <input 
+        type="text" 
+        id="fbName" 
+        placeholder="Your Name" 
+        required 
+        pattern="[A-Za-z\s]+"
+        title="Name should contain only letters"
+      >
+
+      <textarea 
+        id="fbMessage" 
+        placeholder="Your feedback" 
+        required>
+      </textarea>
+
+      <label for="fbRating">Hearts:</label>
+      <select id="fbRating">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5" selected>5</option>
+      </select>
+
+      <button type="submit" id="submitFeedback">Submit</button>
+
+    </div>
+  </form>
+
+  <!-- Feedback cards will appear here -->
+  <div id="feedbackList" class="feedback-track"></div>
+
+</section>
+
+
+
+
+</body>
+</html>
+
+<footer>
+    <p>© 2026 Mehendi Art Studio | Created by Namitha</p>
+
+    <footer class="footer">
+    <div class="footer-info">
+        <div class="footer-box">
+            <h4>📍 Location</h4>
+            <p>38th Kalthuru,Santhekatte,near Canara Bank,Karnataka, India</p>
+        </div>
+
+        <div class="footer-box">
+            <h4>📞 Contact</h4>
+            <p>+91 9742152545</p>
+        </div>
+
+        <div class="footer-box">
+            <h4>✉️ Email</h4>
+            <p>swarna.henna@gmail.com</p>
+        </div>
+    </div>
+
+</footer>
+
+    <div class="footer-social">
+        <span class="follow-text">Follow us</span>
+
+        <div class="footer-links">
+            <a href="https://www.instagram.com/oh_nammu_24/" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+
+            <a href="https://wa.me/919742152545" target="_blank" aria-label="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
+    </div>
+</footer>
+
+
+<script src="script.js"></script>
+</body>
+</html>
